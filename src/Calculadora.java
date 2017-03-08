@@ -22,6 +22,24 @@ public class Calculadora extends JFrame {
 	private String operadorea;
 	boolean esDecimal = false;
 	private Double resultado;
+	private JButton button0;
+	private JButton button7;
+	private JButton button4;
+	private JButton button1;
+	private JButton buttoncoma;
+	private JButton button8;
+	private JButton button5;
+	private JButton button2;
+	private JButton butonc;
+	private JButton button9;
+	private JButton button6;
+	private JButton button3;
+	private JButton buttondividir;
+	private JButton buttonresta;
+	private JButton butonsuma;
+	private JButton buttonmultiplicacion;
+	private JButton buttonsumaresta;
+	private JButton buttonigual;
 
 	/**
 	 * Launch the application.
@@ -49,7 +67,7 @@ public class Calculadora extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 
-		JButton button1 = new JButton("1");
+		button1 = new JButton("1");
 		button1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				button1.getText();
@@ -57,21 +75,21 @@ public class Calculadora extends JFrame {
 			}
 		});
 
-		JButton button2 = new JButton("2");
+		button2 = new JButton("2");
 		button2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button2.getText());
 			}
 		});
 
-		JButton button3 = new JButton("3");
+		button3 = new JButton("3");
 		button3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button3.getText());
 			}
 		});
 
-		JButton butonsuma = new JButton("+");
+		butonsuma = new JButton("+");
 		butonsuma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				numero1 = Double.parseDouble(textFieldPantaila.getText());
@@ -80,21 +98,21 @@ public class Calculadora extends JFrame {
 			}
 		});
 
-		JButton button5 = new JButton("5");
+		button5 = new JButton("5");
 		button5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button5.getText());
 			}
 		});
 
-		JButton button6 = new JButton("6");
+		button6 = new JButton("6");
 		button6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button6.getText());
 			}
 		});
 
-		JButton buttonresta = new JButton("-");
+		buttonresta = new JButton("-");
 		buttonresta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				numero1 = Double.parseDouble(textFieldPantaila.getText());
@@ -103,35 +121,35 @@ public class Calculadora extends JFrame {
 			}
 		});
 
-		JButton button4 = new JButton("4");
+		button4 = new JButton("4");
 		button4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button4.getText());
 			}
 		});
 
-		JButton button7 = new JButton("7");
+		button7 = new JButton("7");
 		button7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button7.getText());
 			}
 		});
 
-		JButton button8 = new JButton("8");
+		button8 = new JButton("8");
 		button8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button8.getText());
 			}
 		});
 
-		JButton button9 = new JButton("9");
+		button9 = new JButton("9");
 		button9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button9.getText());
 			}
 		});
 
-		JButton buttonmultiplicacion = new JButton("*");
+		buttonmultiplicacion = new JButton("*");
 		buttonmultiplicacion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				numero1 = Double.parseDouble(textFieldPantaila.getText());
@@ -140,14 +158,14 @@ public class Calculadora extends JFrame {
 			} 
 		});
 
-		JButton button0 = new JButton("0");
+		button0 = new JButton("0");
 		button0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button0.getText());
 			}
 		});
 
-		JButton buttoncoma = new JButton(".");
+		buttoncoma = new JButton(".");
 		buttoncoma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (!esDecimal) {
@@ -157,7 +175,7 @@ public class Calculadora extends JFrame {
 			}
 		});
 
-		JButton butonc = new JButton("C");
+		butonc = new JButton("C");
 		butonc.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(null);
@@ -165,7 +183,7 @@ public class Calculadora extends JFrame {
 			}
 		});
 
-		JButton buttondividir = new JButton("/");
+		buttondividir = new JButton("/");
 		buttondividir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				numero1 = Double.parseDouble(textFieldPantaila.getText());
@@ -174,7 +192,7 @@ public class Calculadora extends JFrame {
 			}
 		});
 
-		JButton buttonsumaresta = new JButton("+/-");
+		buttonsumaresta = new JButton("+/-");
 		buttonsumaresta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Double numero = Double.parseDouble(textFieldPantaila.getText());
@@ -188,7 +206,7 @@ public class Calculadora extends JFrame {
 			}
 		});
 
-		JButton buttonigual = new JButton("=");
+		buttonigual = new JButton("=");
 		buttonigual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				numero2 = Double.parseDouble(textFieldPantaila.getText());
